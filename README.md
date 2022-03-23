@@ -2,7 +2,7 @@
 
 This repository contains the work for Lab1.
 
-The application is developed with Flutter.
+The application is developed with ***Flutter***.
 
 ## The built Android app
 
