@@ -1,0 +1,6 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+pl/edu/pwr/lab1/i268893/bmi_app/MainActivity.java
+ pl.edu.pwr.lab1.i268893.bmi_app.MainActivity
+pl/edu/pwr/lab1/i268893/bmi_app/BuildConfig.java
+ pl.edu.pwr.lab1.i268893.bmi_app.BuildConfig
