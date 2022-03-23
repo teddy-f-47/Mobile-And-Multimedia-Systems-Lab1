@@ -20,6 +20,8 @@ All of the code for developing the app is available in the directory lib/.
 
 - main.dart : This is the 'root' of the application with the code for the app's main page.
 
+- logger.dart : This is the code for logging the AppLifecycle events.
+
 - constants.dart : This file contains string constants that are re-usable across the app.
 
 - styling.dart : This file contains constants for custom styling, also re-usable across the app.
@@ -48,4 +50,7 @@ The integration test (UI test) for the app is written at:
 
 integration_test/ui_test.dart
 
+## Dependencies
+
+Information about dependencies can be found in the file pubspec.yaml.
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'logger.dart';
 import 'constants.dart';
 import 'styling.dart';
 import 'about.dart';
@@ -14,12 +15,14 @@ class MyBMIApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: Constants.appTitle,
-      theme: ThemeData(
-        primarySwatch: Colors.red,
+    return Logger(
+      child: MaterialApp(
+        title: Constants.appTitle,
+        theme: ThemeData(
+          primarySwatch: Colors.red,
+        ),
+        home: MyBMICustomForm(),
       ),
-      home: MyBMICustomForm(),
     );
   }
 }
