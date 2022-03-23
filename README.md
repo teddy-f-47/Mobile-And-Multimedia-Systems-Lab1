@@ -28,7 +28,7 @@ All of the code for developing the app is available in the directory lib/.
 
 - bmi.dart : This is the code that contains the BMI calculation.
 
-- viewmodel.dart : This is the code that bridges the UI (main.dart, result.dart, history.dart, about.dart) with the storage. When saving data, it retrieves data from the UI and eventually save the data to the storage via storage.dart. When loading data, it retrieves saved data from the storage via storage.dart, perform calculation by calling bmi.dart, and send the result to the requesting UI.
+- viewmodel.dart : This is the code that bridges the UI (main.dart, result.dart, history.dart, about.dart) with the storage. When saving data, it retrieves data from the UI and eventually save the data to the storage via storage.dart. When loading data, it retrieves saved data from the storage via storage.dart, perform calculation by calling bmi.dart, and send the output to the requesting UI.
 
 - result.dart : This is the code for the Result page, i.e. when the user clicks/taps on their result on the main page.
 
