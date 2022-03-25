@@ -5,10 +5,11 @@ import 'bmi.dart';
 import 'storage.dart';
 
 class ViewModel {
-  Storage _myStorage = new Storage();
-  String _saveDataKey = 'saveData';
-  String _saveDataSlotSeparator = '/';
-  String _saveDataItemSeparator = '-';
+  final Storage _myStorage = new Storage();
+  final String _saveDataKey = 'saveData';
+  final String _saveDataSlotSeparator = '/';
+  final String _saveDataItemSeparator = '-';
+  final int _maxSaveDataSlots = 10;
 
   void saveBMI(bool flagImperialUnit, double weightVal, double heightVal) {
     String strFlagImperialUnit = (flagImperialUnit) ? "1" : "0";
@@ -24,7 +25,7 @@ class ViewModel {
     if (saveData.length == 0) {
       _myStorage.putSaveDataString(this._saveDataKey, currentMeasurement);
     }
-    if (saveData.length >= 10) {
+    if (saveData.length >= _maxSaveDataSlots) {
       saveData.removeAt(0);
     }
     saveData.add(currentMeasurement);
@@ -39,22 +40,10 @@ class ViewModel {
   }
 
   BMI _getLastBMI() {
-    List<String> saveData = _getListSaveData();
-    BMI output = new BMI(false, 0, 0);
-
-    if (saveData.length != 0) {
-      String saveDataItemString = saveData.last;
-      if (saveDataItemString != '') {
-        List<String> saveDataItem =
-            saveDataItemString.split(_saveDataItemSeparator);
-        bool flagImperialUnit = (saveDataItem[0] == "1") ? true : false;
-        double weightVal = double.parse(saveDataItem[1]);
-        double heightVal = double.parse(saveDataItem[2]);
-        output = new BMI(flagImperialUnit, weightVal, heightVal);
-      }
-    }
-
-    return output;
+	List<String> saveData = _getListSaveData();
+	int saveDataIndex = saveData.length - 1;
+	
+    return _getBMIAtSlot(saveDataIndex);
   }
 
   bool getLastFlagImperialUnit() {
@@ -101,7 +90,7 @@ class ViewModel {
     List<String> saveData = _getListSaveData();
     BMI output = new BMI(false, 0, 0);
 
-    if (saveData.length != 0 && saveData.length > index) {
+    if (saveData.length != 0 && saveData.length > index && index >= 0) {
       String saveDataItemString = saveData[index];
       if (saveDataItemString != '') {
         List<String> saveDataItem =

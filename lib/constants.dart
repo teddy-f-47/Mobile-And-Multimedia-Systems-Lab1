@@ -21,7 +21,7 @@ class Constants {
   static const String textAlertHeight = 'Please enter a valid height value.\n';
   static const String subtitleAbout = 'About Author';
   static const String textAbout =
-      'This app is developed by Teddy Ferdinan for Lab 1 of project class Mobile and Multimedia Systems at Wroclaw University of Science and Technology.';
+      'This app is developed by Teddy Ferdinan for Lab 1 of laboratorium class Mobile and Multimedia Systems at Wroclaw University of Science and Technology.';
   static const String subtitleResult = 'Your BMI Value is:';
   static const String textResultCategoryLabel =
       'According to WHO, you fall in the category of:';

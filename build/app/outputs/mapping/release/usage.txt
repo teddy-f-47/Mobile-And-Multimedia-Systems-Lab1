@@ -11858,5 +11858,5 @@ kotlinx.coroutines.channels.AbstractChannel$enqueueReceiveInternal$$inlined$addL
     final synthetic kotlinx.coroutines.internal.LockFreeLinkedListNode $node
 io.flutter.FlutterInjector$Builder$NamedThreadFactory:
     final synthetic io.flutter.FlutterInjector$Builder this$0
-io.flutter.plugin.platform.PlatformView$-CC
 io.flutter.plugin.common.BinaryMessenger$-CC
+io.flutter.plugin.platform.PlatformView$-CC
